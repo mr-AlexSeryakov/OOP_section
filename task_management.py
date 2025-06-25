@@ -25,3 +25,22 @@ class TaskList:
 task_list = TaskList()
 task_list.add_task("Task 1")
 print(task_list._TaskList__task_list)
+
+# Проверяем добавление новой задачи в пустой список с помощью метода add_task()
+task_list = TaskList()
+task_list.add_task("Task 1")
+print(task_list._TaskList__task_list)
+
+# Проверяем добавление дублирующихся задач в список при работе метода add_task()
+task_list = TaskList()
+task_list.add_task("Task 1")
+task_list.add_task("Task 2")
+task_list.add_task("Task 2")
+task_list.add_task("Task 3")
+print(task_list._TaskList__task_list)
+
+# Проверяем работу приватного метода __is_task_in_list()
+task_list = TaskList()
+task_list.add_task("Task 1")
+task_list.add_task("Task 2")
+print(task_list._TaskList__is_task_in_list("Task 2"))
